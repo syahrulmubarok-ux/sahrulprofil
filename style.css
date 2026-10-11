@@ -50,12 +50,7 @@ nav {
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     border-bottom: 1px solid #1f2937;
-   transition: transform 0.35s ease;
 }
-
-/* Menu ikut tersembunyi saat halaman di-scroll ke bawah */
-nav.nav-hidden {
-    transform:  translateY(-100%);
 
 .nav-container {
     max-width: 1200px;
@@ -516,15 +511,21 @@ footer {
     }
 
     nav ul {
-        flex-direction: column;
+        display: grid;
+        grid-template-rows: 0fr;
         text-align: center;
-        max-height: 0;
         overflow: hidden;
-        transition: max-height 0.3s ease;
+        transition: grid-template-rows 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+    }
+
+    nav ul li {
+        min-height: 0;
     }
 
     nav.menu-open ul {
-        max-height: 300px;
+        grid-template-rows: 1fr;
+        opacity: 1;
     }
 
     nav ul li a {
