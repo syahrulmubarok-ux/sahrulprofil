@@ -493,21 +493,27 @@ footer {
     }
 
     .nav-toggle {
-        display: block;
+        display: flex;
+        align-items: center;
+        gap: 8px;
         width: 100%;
-        background-color: #111418;
-        color: #ffffff;
+        background-color: #00e676;
+        color: #052e16;
         border: none;
-        padding: 14px 15px;
+        border-radius: 6px;
+        margin: 10px 0;
+        padding: 14px 18px;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 700;
         font-family: inherit;
         text-align: left;
         cursor: pointer;
+        transition: background-color 0.2s, color 0.2s;
     }
 
     .nav-toggle:hover {
-        color: #00e676;
+        background-color: #00ff88;
+        color: #052e16;
     }
 
     nav ul {
@@ -529,9 +535,23 @@ footer {
     }
 
     nav ul li a {
-        padding: 12px;
-        font-size: 15px;
-        border-bottom: 1px solid #222222;
+        display: block;
+        padding: 14px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        color: #ffffff;
+        background-color: #1b2129;
+        border: 1px solid #2f3a46;
+        border-radius: 6px;
+        margin-bottom: 10px;
+        text-decoration: none;
+    }
+
+    nav ul li a.active {
+        background-color: #00e676;
+        color: #052e16;
+        border-color: #00e676;
     }
 
     .page-navigation {
@@ -568,3 +588,4 @@ footer {
         max-height: 220px;
     }
 }
+
