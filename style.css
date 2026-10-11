@@ -1,0 +1,570 @@
+/* Reset dasar dan Font */
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: #0d0f12;
+    color: #e2e8f0;
+}
+
+/* Header & Jumbotron (Warna Hijau Tua) */
+header {
+    background-color: #064e3b;
+    color: #ffffff;
+    overflow: visible;
+}
+
+.jumbotron {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #065f46 0%, #022c22 100%);
+}
+
+.jumbotron h1 {
+    font-size: 40px; /* Minimal salah satu ukuran font berbasis 40px */
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.jumbotron p {
+    font-size: 18px;
+    font-style: italic;
+    opacity: 0.95;
+}
+
+/* Navigasi */
+nav {
+    background-color: #111418;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    border-bottom: 1px solid #1f2937;
+    transition: transform 0.35s ease;
+}
+
+/* Menu ikut tersembunyi saat halaman di-scroll ke bawah */
+nav.nav-hidden {
+    transform: translateY(-100%);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+nav ul li a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #00e676;
+    color: #052e16;
+}
+
+nav ul li a.active {
+    background-color: #00e676;
+    color: #052e16;
+    border-bottom: 3px solid #ffffff;
+}
+
+/* Tata Letak Utama */
+main {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    gap: 20px;
+}
+
+#content {
+    flex: 3;
+}
+
+aside {
+    flex: 1;
+}
+
+.card {
+    background-color: #161a20;
+    border: 1px solid #232931;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    scroll-margin-top: 75px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(0, 230, 118, 0.15);
+    color: #00e676;
+    border: 1px solid rgba(0, 230, 118, 0.3);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+}
+
+.card h2 {
+    color: #00e676;
+    border-bottom: 3px solid #00e676;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 28px;
+}
+
+.card h3 {
+    color: #f1f5f9;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.card p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: #cbd5e1;
+}
+
+.card ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.card ul li {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+}
+
+.feature-image {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Foto Bulat di Halaman Tentang */
+.foto-tentang {
+    text-align: center;
+    margin: 10px 0 20px;
+}
+
+.foto-tentang img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 50%;
+    border: 4px solid #00e676;
+    box-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
+}
+
+.foto-tentang figcaption {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-top: 8px;
+}
+
+/* Foto Landscape di Halaman Pendidikan (600x250) */
+.foto-pendidikan {
+    margin: 10px 0 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #232931;
+    width: 100%;
+    max-width: 600px;
+}
+
+.foto-pendidikan img {
+    width: 600px;
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px 8px 0 0;
+    display: block;
+}
+
+.foto-pendidikan figcaption {
+    font-size: 13px;
+    color: #64748b;
+    text-align: center;
+    padding: 6px 0 4px;
+    background-color: #1e242c;
+    border-top: 1px solid #232931;
+}
+
+/* Foto Prestasi Portrait di SMP (100x200) berdampingan */
+.foto-prestasi-group {
+    display: flex;
+    gap: 12px;
+    margin: 10px 0 15px;
+    flex-wrap: wrap;
+}
+
+.foto-prestasi {
+    margin: 0;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #232931;
+    flex-shrink: 0;
+}
+
+.foto-prestasi img {
+    width: 100px;
+    height: 200px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 6px;
+    display: block;
+}
+
+/* Foto Landscape di Halaman Organisasi (600x250) */
+.foto-organisasi {
+    margin: 10px 0 12px;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #232931;
+    width: 100%;
+    max-width: 600px;
+}
+
+.foto-organisasi img {
+    width: 600px;
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px 8px 0 0;
+    display: block;
+}
+
+.foto-organisasi figcaption {
+    font-size: 13px;
+    color: #64748b;
+    text-align: center;
+    padding: 6px 0 4px;
+    background-color: #1e242c;
+    border-top: 1px solid #232931;
+}
+
+/* Link Kontak di Tabel Biodata */
+.kontak-link {
+    color: #00e676;
+    text-decoration: none;
+    word-break: break-all;
+    font-size: 14px;
+}
+
+.kontak-link:hover {
+    text-decoration: underline;
+    color: #00ff88;
+}
+
+/* Contact Info */
+.contact-info {
+    background-color: #101418;
+    border-left: 4px solid #00e676;
+    padding: 15px;
+    border-radius: 4px;
+    border-top: 1px solid #232931;
+    border-right: 1px solid #232931;
+    border-bottom: 1px solid #232931;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: left;
+    color: #cbd5e1;
+}
+
+/* Navigasi Antar Halaman (Tombol Pindah Halaman) */
+.page-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #232931;
+}
+
+.btn-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background-color: #00e676;
+    color: #052e16;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-nav:hover {
+    background-color: #00ff88;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.4);
+}
+
+.btn-nav.btn-secondary {
+    background-color: #232931;
+    color: #e2e8f0;
+    border: 1px solid #374151;
+}
+
+.btn-nav.btn-secondary:hover {
+    background-color: #2d3748;
+    color: #00e676;
+    border-color: #00e676;
+}
+
+/* Form Kontak */
+.contact-form {
+    margin-top: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    color: #e2e8f0;
+    font-size: 15px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background-color: #101418;
+    color: #f1f5f9;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 15px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #00e676;
+    box-shadow: 0 0 0 3px rgba(0, 230, 118, 0.25);
+}
+
+.btn-submit {
+    background-color: #00e676;
+    color: #052e16;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #00ff88;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 230, 118, 0.4);
+}
+
+/* Tabel Informasi Biodata Diri */
+.profile header {
+    background-color: transparent;
+    color: #e2e8f0;
+    text-align: center;
+}
+
+.profile h2 {
+    color: #00e676;
+    font-size: 24px;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.profile figure {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.profile figure img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #00e676;
+    box-shadow: 0 0 15px rgba(0, 230, 118, 0.35);
+}
+
+.profile figcaption {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-top: 5px;
+}
+
+.profile section h3 {
+    text-align: center;
+    border-bottom: 2px solid #232931;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #f1f5f9;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 10px;
+    border-bottom: 1px solid #232931;
+    font-size: 15px;
+}
+
+table th {
+    text-align: left;
+    background-color: #1e242c;
+    color: #00e676;
+    width: 40%;
+}
+
+table td {
+    color: #e2e8f0;
+}
+
+footer {
+    background-color: #090c10;
+    color: #94a3b8;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    font-size: 14px;
+    border-top: 1px solid #1f2937;
+}
+
+/* Responsivitas */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        padding: 0 10px;
+    }
+
+    .nav-container {
+        padding: 0 10px;
+    }
+
+    .nav-toggle {
+        display: block;
+        width: 100%;
+        background-color: #111418;
+        color: #ffffff;
+        border: none;
+        padding: 14px 15px;
+        font-size: 16px;
+        font-weight: 600;
+        font-family: inherit;
+        text-align: left;
+        cursor: pointer;
+    }
+
+    .nav-toggle:hover {
+        color: #00e676;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    nav.menu-open ul {
+        max-height: 300px;
+    }
+
+    nav ul li a {
+        padding: 12px;
+        font-size: 15px;
+        border-bottom: 1px solid #222222;
+    }
+
+    .page-navigation {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .btn-nav {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .jumbotron {
+        padding: 40px 15px;
+    }
+
+    .jumbotron h1 {
+        font-size: 28px;
+    }
+
+    .jumbotron p {
+        font-size: 16px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+
+    .card h2 {
+        font-size: 22px;
+    }
+
+    .feature-image {
+        max-height: 220px;
+    }
+}
